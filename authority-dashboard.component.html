@@ -1,0 +1,10 @@
+<div class="grid-container">
+    <div *ngFor="let item of authority">
+        <mat-card class="hover" (click)="gotoModule(item)">
+            <mat-card-header align="center">
+                <img mat-card-avatar src="./assets/images/modules/{{item.authority.iconImage}}" alt="ไอคอน" style="border-radius: 0">
+                <mat-card-title>{{item.authority.name}}</mat-card-title>
+            </mat-card-header>
+        </mat-card>
+    </div>
+</div>
