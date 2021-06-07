@@ -25,21 +25,21 @@
 
                     <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.gt-md="50" fxLayout="row wrap" fxLayoutAlign="start center">
                         <mat-form-field fxFlex="20" class="pad-input number-input">
-                            <input matInput placeholder="รหัส" name="courtcode" [(ngModel)]="courtcode">
+                            <input matInput placeholder="title" name="courtcode" [(ngModel)]="courtcode">
                         </mat-form-field>
                         <mat-form-field fxFlex class="pad-input number-input">
-                            <input matInput placeholder="ศาล" name="courtname" [(ngModel)]="courtname">
+                            <input matInput placeholder="description" name="courtname" [(ngModel)]="courtname">
                         </mat-form-field>
-                        <button color="accent" mat-icon-button="ศาล" (click)="courtopen()">
+                        <button color="accent" mat-icon-button="description" (click)="courtopen()">
                             <i class="ti-agenda"></i>
                             </button>
                     </div>
 
                     <mat-form-field fxFlex="100" fxFlex="20" fxFlex.gt-md="25" class="pad-input number-input">
-                        <input matInput placeholder="ค่า parameter ของระบบ" name="value" [(ngModel)]="ParamModel.value">
+                        <input matInput placeholder="contact information" name="value" [(ngModel)]="ParamModel.value">
                     </mat-form-field>
                     <mat-form-field fxFlex="100" fxFlex="20" fxFlex.gt-md="25" fxFlex class="pad-input number-input">
-                        <input matInput placeholder="ชื่อ parameter ของระบบ" name="name " [(ngModel)]="ParamModel.name">
+                        <input matInput placeholder="created timestamp" name="name " [(ngModel)]="ParamModel.name">
                     </mat-form-field>
                     <!-- <button color="accent" mat-icon-button="parameter ของระบบ" (click)="Paramopen()">
                         <i class="ti-agenda"></i>
@@ -48,7 +48,7 @@
 
 
                     <mat-form-field fxFlex="100" fxFlex.gt-sm="100" fxFlex.gt-md="25" class="pad-input number-input">
-                        <input matInput placeholder="รหัสแก้ไขได้" name="selectCode" [(ngModel)]="ParamModel.selectCode">
+                        <input matInput placeholder="latest ticket update timestamp" name="selectCode" [(ngModel)]="ParamModel.selectCode">
                     </mat-form-field>
 
 
