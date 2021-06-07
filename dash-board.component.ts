@@ -26,21 +26,13 @@ export class DashBoardComponent implements OnInit {
   },
   {
     id: 3,
-    name: 'ระบบหมายจับหมายค้น',
-    detail: 'บันทึกรายละเอียดการออกหมายจับ/หมายค้น ออกรายงานการขอหมายจับ/หมายค้น',
-    icon: 'handcuffs',
-    color: '#9468BA',
-    route: 'warrant',
-  },
-  {
-    id: 4,
     name: 'contact',
     detail: 'contact',
     icon: '015-handshake',
     color: '#8B76D0',
     route: 'mediation',
   }, {
-    id: 5,
+    id: 4,
     name: 'information',
     detail: 'information',
     icon: 'box',
@@ -48,7 +40,7 @@ export class DashBoardComponent implements OnInit {
     route: 'dms',
   },
   {
-    id: 6,
+    id: 5,
     name: 'created timestamp',
     detail: 'created timestamp',
     icon: 'user-bubble',
@@ -57,7 +49,7 @@ export class DashBoardComponent implements OnInit {
     menu: []
   },
   {
-    id: 7,
+    id: 6,
     name: 'latest ticket update timestamp',
     detail: 'latest ticket update timestamp',
     icon: 'court',
