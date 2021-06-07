@@ -1,0 +1,86 @@
+<div fxLayout="column" style="height: 100%">
+
+    <div class="page-container" fxFlex style="overflow: auto">
+        <mat-card class="head-card">
+            <div #detView class="head-card-icon">
+                <i class="{{pageIcon}}"></i>
+            </div>
+            <div fxLayout="column" style="width:100%">
+                <span class="head-card-title">{{pagename}}</span>
+                <div class="head-card-description" fxLayout="row">
+                    <span>{{pageDescription}}</span>
+                </div>
+            </div>
+        </mat-card>
+
+        <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="16px" style="padding: 8px">
+
+            <mat-card class="form-card">
+                <mat-toolbar class="toolbar-color">
+                    <span>ข้อมูลการออกรายงาน</span>
+                </mat-toolbar>
+                <div class="form-border" fxLayout="row wrap" fxLayoutAlign="start center">
+
+                    <div *ngFor="let item of reportModel; let i = index" fxFlex="100" fxFlex.gt-sm="50"
+                        fxFlex.gt-md="33" fxLayout="row wrap" fxLayoutAlign="start center">
+
+                        <mat-form-field *ngIf="item.reportTypeName == 'varcha2'"
+                            fxFlex="100" class="pad-input number-input">
+
+                            <input matInput maxlength="{{item.fieldTypeMaxNumber}}" placeholder="{{item.fieldName}}"
+                                name="{{item.fieldName}}" [(ngModel)]="ModelAll.bookmarkValueList[i].data">
+
+                        </mat-form-field>
+
+                        <mat-form-field *ngIf="item.reportTypeName == 'number' "
+                            fxFlex="100" class="pad-input number-input">
+
+                            <input digitOnly matInput maxlength="{{item.fieldTypeMaxNumber}}" placeholder="{{item.fieldName}}"
+                                name="{{item.fieldName}}" [(ngModel)]="ModelAll.bookmarkValueList[i].data">
+
+                        </mat-form-field>
+
+                        <mat-form-field *ngIf="item.reportTypeName == 'textarea'" fxFlex="100"
+                            class="pad-input number-input">
+
+                            <textarea matInput placeholder="{{item.fieldName}}" name="{{item.fieldName}}"
+                                [(ngModel)]="ModelAll.bookmarkValueList[i].data"></textarea>
+                        </mat-form-field>
+
+
+
+                        <mat-form-field fxFlex *ngIf="item.reportTypeName == 'dropdownlist'"
+                            class="pad-input number-input">
+                            <mat-label>{{item.fieldName}}</mat-label>
+                            <mat-select [(ngModel)]="ModelAll.bookmarkValueList[i].data">
+                                <mat-option *ngFor="let food of Ui[item.fieldlookup]"
+                                    [value]="food[item.fieldlookupMap]">
+                                    {{food[item.fieldlookupMap]}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+
+                    </div>
+
+
+                    <div fxFlex="100" fxLayoutGap="8px" fxLayoutAlign="end start">
+                        <button mat-flat-button (click)="print()" color="accent">พิมพ์</button>
+                        <button mat-flat-button class="normal-button">ล้าง</button>
+                    </div>
+                </div>
+            </mat-card>
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+</div>
